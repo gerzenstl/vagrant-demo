@@ -1,0 +1,53 @@
+/* 
+    Document   : style
+    Created on : Sep 26, 2013, 2:55:50 AM
+    Author     : luis
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+  display: block;
+}
+
+.slide.cover-slides {
+  background: #f7f6f1 url(../img/vagrant-background.png) no-repeat center;
+}
+
+.cover-slides {
+  margin-top: 420px;
+}
+
+.slide h1.center,
+.slide q.center {
+  text-align: center;  
+}
+
+.slide .slide-title {
+  font-size: 50px;
+  color: #48b4fb;
+  margin: 0 0 50px 0;
+}
+
+.slide ul li.dot {
+  list-style: initial;
+  margin: 10px 0;
+}
+
+.slide ul li ul li {
+  list-style-type: square;
+  list-style-position: inside;
+}
+
+.slide-img.vagrant-diagram {
+  height: 685px;
+}
+
+.step.slide.wide-diagram {
+  padding: 0 64px;
+}
+
+.slide-subtitle {
+  font-size: 35px;
+  margin: 0 0 10px 0;
+}
