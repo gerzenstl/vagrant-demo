@@ -10,6 +10,16 @@ root {
   display: block;
 }
 
+.slide h1,
+.slide p {
+  color: #333;
+}
+
+#slides-author {
+font-size: 25px;
+color: #48b4fb;
+}
+
 .slide.cover-slides {
   background: #f7f6f1 url(../img/vagrant-background.png) no-repeat center;
 }
@@ -19,7 +29,8 @@ root {
 }
 
 .slide h1.center,
-.slide q.center {
+.slide q.center,
+.slide p.center {
   text-align: center;  
 }
 
