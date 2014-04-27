@@ -15,7 +15,6 @@
   <link href="css/style.css" rel="stylesheet" />
 
   <link rel="shortcut icon" href="favicon.png" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 </head>
   <body class="impress-not-supported">
     <div class="fallback-message">
@@ -30,11 +29,21 @@
           <q><p id="slides-author" class="center">Luis Gerzenstein - @gerzenstl</p></q>
         </div>
       </div>
-
+      
+      <div class="step slide" data-y="1000">
+        <div class="slide-title">Antes de comenzar...</div>
+        <q><p>Unas preguntas.<p></q>
+      </div>
+      
       <div class="step slide" data-x="1500">
         <div class="slide-title">Vagrant</div>
         <q><p>“Herramienta que permite crear, configurar y reproducir entornos de desarrollo a traves 
           de un worklfow consistente y orientado a la automatización.”<p></q>
+      </div>
+      
+      <div class="step slide" data-x="1500" data-y="1000">
+        <div class="slide-title">Vagrant: breve explicación.</div>
+        <q><p><p></q>
       </div>
 
       <div class="step slide" data-x="3000">
@@ -59,9 +68,12 @@
         <div class="slide-title">Vagrant</div>
         <p class="slide-subtitle">Si sos Dev:</p>
         <ul>
-          <li class="dot"><p>Podés tener entornos consistentes y aislados de lo que tengas 
+          <li class="dot"><p>Podés tener entornos consistentes (en una VM)y aislados de lo que tengas 
               instalado en tu computadora (navegadores, IDEs, debuggers, etc.).</p></li>
-          <li class="dot"><p>Todos en un equipo tienen el mismo entorno de trabajo.</p></li>
+          <li class="dot"><p>Todos en un equipo comparten las mismas configuraciones de entorno de trabajo.</p></li>
+          <li class="dot"><p>Podés setear un entorno con solo usar unos comandos.</p></li>
+          <li class="dot"><p>Si ya lo tiene seteado, también puede actualizar las configuaciones
+              en poco tiempo.</p></li>
           <li class="dot"><p>Totalmente independiente del Sist. Op. que tengas en tu 
               computadora (bueno, casi).</p></li>
         </ul>
@@ -94,16 +106,27 @@
         <ul>
           <li class="dot"><p>Customizable.</p></li>
           <li class="dot"><p>Set de comandos simples.</p></li>            
-          <li class="dot"><p>Posibilidad de tener una VM por proyecto/aplicación.</p></li>            
-          <li class="dot"><p>Flexibilidad a la hora de elegir un provider</p></li>            
+          <li class="dot"><p>Permite tener entornos sincronizados con el de Producción (casi en todo lo posible).</p></li>        
+          <li class="dot"><p>Posibilidad de tener una VM por proyecto/aplicación, cada una con distintas configuraciones.</p></li>            
+          <li class="dot"><p>Flexibilidad a la hora de elegir un provisioner</p></li>            
           <li class="dot"><p>No hay conflicto con sist. de control de versiones como Git, SVN o Mercurial.</p></li>            
-          <li class="dot"><p>Permite versionar las configuraciones del entorno.</p></li>
           <li class="dot"><p>Entornos portables y reusables.</p></li>
-          <li class="dot"><p>Posibilidad de tener un entorno similar a Producción (casi en todo lo posible).</p></li>        
+        </ul>    
+      </div>
+      
+      <div class="step slide" data-x="10500">
+        <div class="slide-title">Vagrant</div>
+        <p class="slide-subtitle">Desventajas:</p>
+        <ul>
+          <li class="dot"><p>Uso de VM => consume recursos (a la maquina host).</p></li>
+          <li class="dot"><p>Nada es inmune a Microsoft (NFS, problemas peculiares, ...)</p></li>            
+          <li class="dot"><p>Posibilidad de tener una VM por proyecto/aplicación.</p></li>            
+          <li class="dot"><p>Si se usa Puppet, requiere un poco de tiempo  aprender a usarlo.</p></li>   
+          <li class="dot"><p>La gente con poca experiencia en setear entornos, tienen menos chances de aprender con Vagrant.</p></li>   
         </ul>      
       </div>
 
-      <div class="step slide" data-x="10500">
+      <div class="step slide" data-x="12000">
         <div class="slide-title">Vagrant</div>
         <p class="slide-subtitle">Algunos conceptos:</p>
         <ul>        
@@ -119,27 +142,27 @@
         </ul>      
       </div>
 
-      <div class="step slide wide-diagram" data-x="12000">
+      <div class="step slide wide-diagram" data-x="13500">
         <img class="slide-img vagrant-diagram" src="img/vagrant-diagram.jpg" alt="Vagrant diagram" title="Vagrant diagram">
       </div>
 
-      <div class="step slide" data-x="13500">
+      <div class="step slide" data-x="15000">
         <div class="slide-title">Vagrant</div>
         <p class="slide-subtitle">Instalación:</p>
         <ul>
-          <li class="dot"><p>Instalar VirtualBox (o VMware player)</p></li>
+          <li class="dot"><p>Instalar un software de virtualización (recomendable: VirtualBox).</p></li>
           <li class="dot">
-            <p>Descargar instalador desde: <a href="http://downloads.vagrantup.com" target="_blank">downloads.vagrantup.com</a></p><br/>
-            <ul>
-              <li><p>En Windows: instalan el archivo Vagrant_1.3.1.msi</p></li><br/>
-              <li><p>En Debian/Ubuntu: <br>sudo dpkg -i vagrant_1.3.1_x86_64.deb</p></li><br/>
-            </ul>
+            <p>Instalar Vagrant. Instalador disponible en : <a href="http://downloads.vagrantup.com" target="_blank">downloads.vagrantup.com</a></p><br/>
+              <ul>
+                <li><p>En Windows: instalan el archivo Vagrant_1.3.5.msi</p></li><br/>
+                <li><p>En Debian/Ubuntu: <br>sudo dpkg -i vagrant_1.3.5_x86_64.deb</p></li><br/>
+              </ul>
           </li>
           <li class="dot"><p>Listo!</p></li>
         </ul>
       </div>
 
-      <div class="step slide" data-x="15000">
+      <div class="step slide" data-x="16500">
         <div class="slide-title">Vagrant</div>
         <p class="slide-subtitle">Comandos mas usados:</p>
         <ul>
@@ -152,7 +175,7 @@
         </ul>
       </div>
 
-      <div class="step slide" data-x="16500">
+      <div class="step slide" data-x="18000">
         <div class="slide-title">Vagrant</div>
         <p class="slide-subtitle">Típico workflow de comandos:</p>
         <ul>
@@ -167,7 +190,7 @@
         </ul>
       </div>
 
-      <div class="step slide" data-x="18000">
+      <div class="step slide" data-x="19500">
         <div class="slide-title">Vagrant</div>
         <p class="slide-subtitle">Mas info:</p>
         <ul>
@@ -179,7 +202,11 @@
         </ul>
       </div>
       
-      <div class="step slide" data-x="19500">
+      <div class="step slide" data-x="21000">
+        <q class="single-msje-slide"><p class="center">Preguntas?</p></q>
+      </div>
+      
+      <div class="step slide" data-x="22500">
         <q class="single-msje-slide"><p class="center">Gracias!</p></q>
       </div>
     </div>

@@ -16,8 +16,8 @@ root {
 }
 
 #slides-author {
-font-size: 25px;
-color: #48b4fb;
+  font-size: 25px;
+  color: #48b4fb;
 }
 
 .slide.cover-slides {
@@ -61,4 +61,8 @@ color: #48b4fb;
 .slide-subtitle {
   font-size: 35px;
   margin: 0 0 10px 0;
+}
+
+.sorry {
+  font-size: 40px;
 }
