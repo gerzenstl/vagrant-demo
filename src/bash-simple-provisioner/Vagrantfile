@@ -1,0 +1,23 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+
+  config.vm.box = "lucid32.box"
+
+  config.vm.box_url = "http://files.vagrantup.com/lucid32.box"
+  
+  config.vm.synced_folder "../scr/bash-simple-provisioner", "/vagrant"  
+
+  config.vm.provision :shell, :path => "setup.sh"
+  
+  config.vm.provider :virtualbox do |vb|
+  
+    vb.gui = FALSE
+    vb.name = "Simple bash provisioner"
+    # Use VBoxManage to customize the VM. For example to change memory:
+    vb.customize ["modifyvm", :id, "--memory", "1624"]
+  end
+end
