@@ -54,6 +54,10 @@ root {
   height: 685px;
 }
 
+.slide-img.vagrant-workflow {
+  margin-top: 120px;
+}
+
 .step.slide.wide-diagram {
   padding: 0 64px;
 }
