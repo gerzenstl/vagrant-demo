@@ -1,0 +1,1 @@
+This folder is used to show what happens when you run: `vagrant init`
