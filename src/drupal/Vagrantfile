@@ -17,9 +17,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Settings of the Provider used.
   config.vm.provider :virtualbox do |v|
-    v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-    v.customize ["modifyvm", :id, "--memory", 1512]
-    v.customize ["modifyvm", :id, "--name", "drupal-vagrant-demo"]
+    v.gui = FALSE
+    v.name = "Puppet vagrant demo"
+    v.customize ["modifyvm", :id, "--memory", "1624"]
+    #v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    #v.customize ["modifyvm", :id, "--memory", 1512]
+    #v.customize ["modifyvm", :id, "--name", "drupal-vagrant-demo"]
   end
 
   nfs_setting = RUBY_PLATFORM =~ /darwin/ || RUBY_PLATFORM =~ /linux/
