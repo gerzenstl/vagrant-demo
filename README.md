@@ -1,8 +1,7 @@
 vagrant-demo
 ===================
 
-This repository is for my slides of my talk "Vagrant for the people!"
-
-It also contains examples of Vagrant using Puppet or Bash scripts as provisioner 
+This repository contains examples of Vagrant implementation, using Puppet or Bash scripts as provisioner 
 to setup different environments.
 
+This is a working ing progress project.
