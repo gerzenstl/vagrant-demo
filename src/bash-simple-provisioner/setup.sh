@@ -30,7 +30,7 @@ sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password passwor
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
 sudo apt-get -y install mysql-server
 
-echo ">>> Installing VIM LIKE A LOSER"
+echo ">>> Installing VIM LIKE A BUS!"
 # sudo apt-get install -y vim
 
 cd /var/www/

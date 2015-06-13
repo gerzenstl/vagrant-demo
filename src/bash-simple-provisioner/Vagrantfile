@@ -10,7 +10,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_url = "http://files.vagrantup.com/lucid32.box"
   
  
-  config.vm.network :private_network, ip: "192.168.100.121"
+  config.vm.network :private_network, ip: "192.168.100.101"
 
   config.vm.synced_folder ".", "/vagrant"  
 
